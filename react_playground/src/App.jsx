@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Website from './pages/website/website';
+import Test from "./pages/testComponent";
 
 const Header = () => {
   return (
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Website />
+      <Test />
     </div>
   );
 }
