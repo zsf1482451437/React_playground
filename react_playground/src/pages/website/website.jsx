@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { getWebsite } from "../../request/website/websiteApi";
+import { getWebsite } from "@request/website/websiteApi";
 
 const Website = () => {
     useEffect(() => {

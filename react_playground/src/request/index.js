@@ -42,7 +42,6 @@ class Request {
 
   // GET请求
   get(config) {
-    debugger;
     return this.request({ ...config, method: "GET" });
   }
 

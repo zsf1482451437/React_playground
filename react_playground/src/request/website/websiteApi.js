@@ -1,4 +1,4 @@
-import request from "../index";
+import request from "@request/index";
 
 const api = {
   website: "/website",
