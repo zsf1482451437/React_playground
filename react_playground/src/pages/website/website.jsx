@@ -1,16 +1,18 @@
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import { getWebsite } from "@request/website/websiteApi";
+import { getWebsiteInfo } from "@store/website/thunk";
+import { websiteSelector } from "@store/website/getter";
 
 const Website = () => {
+    const dispatch = useDispatch();
+    const { website_short_name } = useSelector(websiteSelector);
     useEffect(() => {
-        getWebsite().then((res) => {
-            console.log(res);
-        });
-     }, []);
+        dispatch(getWebsiteInfo());
+     }, [dispatch]);
     return (
         <div>
-            <h2>Website</h2>
+            <h2>{website_short_name}</h2>
         </div>
     )
 }

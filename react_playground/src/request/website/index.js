@@ -4,5 +4,5 @@ const api = {
   website: "/website",
 };
 
-export const getWebsite = () =>
+export const getWebsiteAPI = () =>
   request.get({ url: api.website }).then((res) => res.data);
