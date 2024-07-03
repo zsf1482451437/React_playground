@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { getWebsiteInfo } from "@store/website/thunk";
+import { getWebsiteInfo } from "store/website/thunk";
 
 const initialState = {
   website: {},

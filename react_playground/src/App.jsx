@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Website from '@pages/website/website';
+import Website from 'pages/website';
 
 const Header = () => {
   return (

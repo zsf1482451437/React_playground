@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getWebsiteInfo } from "@store/website/thunk";
-import { websiteSelector } from "@store/website/getter";
+import { getWebsiteInfo } from "store/website/thunk";
+import { websiteSelector } from "store/website/getter";
 
 const Website = () => {
     const dispatch = useDispatch();
