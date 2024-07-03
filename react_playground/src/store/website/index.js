@@ -1,13 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { getWebsiteInfo } from "store/website/thunk";
+import { getWebsiteInfo } from 'store/website/thunk';
 
 const initialState = {
   website: {},
 };
 
 const websiteSlice = createSlice({
-  name: "website",
+  name: 'website',
   initialState,
   reducers: {
     setWebsite: (state, action) => {

@@ -25,9 +25,11 @@ const items = [
 ];
 
 const Test = () => {
-  return <div>
-    <Collapse Collapse accordion ghost items={items} />
-  </div>;
+  return (
+    <div>
+      <Collapse Collapse accordion ghost items={items} />
+    </div>
+  );
 };
 
 export default Test;

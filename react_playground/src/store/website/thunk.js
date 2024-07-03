@@ -1,9 +1,9 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { getWebsiteAPI } from "request/website";
+import { getWebsiteAPI } from 'request/website';
 
 export const getWebsiteInfo = createAsyncThunk(
-  "website/getWebsite",
+  'website/getWebsite',
   async () => {
     const res = await getWebsiteAPI();
     return res;

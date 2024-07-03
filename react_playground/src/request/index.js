@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-import { BASE_URL, TIMEOUT, TOKEN } from "./config";
+import { BASE_URL, TIMEOUT, TOKEN } from './config';
 
 class Request {
   constructor(baseURL, timeout) {
@@ -14,7 +14,7 @@ class Request {
     this.instance.interceptors.request.use(
       (config) => {
         // 在发送请求之前做些什么，例如设置请求头
-        config.headers["Authorization"] = `Bearer ${TOKEN}`; // 替换为实际的token
+        config.headers['Authorization'] = `Bearer ${TOKEN}`; // 替换为实际的token
         return config;
       },
       (error) => {
@@ -42,22 +42,22 @@ class Request {
 
   // GET请求
   get(config) {
-    return this.request({ ...config, method: "GET" });
+    return this.request({ ...config, method: 'GET' });
   }
 
   // POST请求
   post(config) {
-    return this.request({ ...config, method: "POST" });
+    return this.request({ ...config, method: 'POST' });
   }
 
   // PUT请求
   put(config) {
-    return this.request({ ...config, method: "PUT" });
+    return this.request({ ...config, method: 'PUT' });
   }
 
   // DELETE请求
   delete(config) {
-    return this.request({ ...config, method: "DELETE" });
+    return this.request({ ...config, method: 'DELETE' });
   }
 }
 

@@ -64,7 +64,8 @@
   "scripts": {
     "start": "set  && set PORT=8006 && node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "prettier": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -150,5 +151,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^3.3.2"
   }
 }

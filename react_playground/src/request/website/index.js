@@ -1,7 +1,7 @@
-import request from "request/index";
+import request from 'request/index';
 
 const api = {
-  website: "/website",
+  website: '/website',
 };
 
 export const getWebsiteAPI = () =>
