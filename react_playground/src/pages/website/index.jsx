@@ -10,6 +10,7 @@ const Website = () => {
   useEffect(() => {
     dispatch(getWebsiteInfo());
   }, [dispatch]);
+
   return (
     <div>
       <h2>{website_short_name}</h2>
