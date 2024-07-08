@@ -8,10 +8,9 @@ import { init, handleResize } from 'animation/stars/star';
 
 const Animation = () => {
   useEffect(() => {
-    window.addEventListener('load', init);
+    init();
     window.addEventListener('resize', handleResize, false);
     return () => {
-      window.removeEventListener('load', init);
       window.removeEventListener('resize', handleResize, false);
     };
   }, []);
