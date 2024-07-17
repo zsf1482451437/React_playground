@@ -1,0 +1,110 @@
+$primary-color: #f9b234;
+$secondary-colors: #3ecd5e, #e44002, #952aff, #cd3e94, #4c49ea;
+$background-color: #121212;
+$title-font-size: 30px;
+$date-font-size: 18px;
+
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 767px) {
+    width: 96%;
+  }
+}
+
+body {
+  background-color: #000;
+}
+
+.ag-courses_box {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+@for $i from 1 through length($secondary-colors) {
+  .ag-courses_item:nth-child(#{$i}) .ag-courses-item_bg {
+    background-color: nth($secondary-colors, $i);
+  }
+}
+
+.ag-courses_item {
+  flex-basis: calc(33.33333% - 30px);
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+
+  @media only screen and (max-width: 979px) {
+    flex-basis: calc(50% - 30px);
+  }
+
+  @media only screen and (max-width: 639px) {
+    flex-basis: 100%;
+  }
+
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: $background-color;
+    overflow: hidden;
+    position: relative;
+
+    &:hover,
+    &:hover .ag-courses-item_date {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:hover .ag-courses-item_bg {
+      transform: scale(10);
+    }
+  }
+
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: $title-font-size;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+
+    @media only screen and (max-width: 639px) {
+      min-height: 72px;
+      line-height: 1;
+      font-size: 24px;
+    }
+  }
+
+  .ag-courses-item_date-box {
+    font-size: $date-font-size;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+
+    @media only screen and (max-width: 639px) {
+      font-size: 16px;
+    }
+  }
+
+  .ag-courses-item_date {
+    font-weight: bold;
+    color: $primary-color;
+    transition: color 0.5s ease;
+  }
+
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: $primary-color;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+}
