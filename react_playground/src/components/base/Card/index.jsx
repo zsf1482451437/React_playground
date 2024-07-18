@@ -26,7 +26,7 @@ const Card = () => {
       <div className={cn('ag-courses_box')}>
         {courses.map((course, index) => (
           <div key={index} className={cn('ag-courses_item')}>
-            <a href="#" className={cn('ag-courses-item_link')}>
+            <a href="/" className={cn('ag-courses-item_link')}>
               <div className={cn('ag-courses-item_bg')}></div>
               <div className={cn('ag-courses-item_title')}>{course.title}</div>
               <div className={cn('ag-courses-item_date-box')}>
