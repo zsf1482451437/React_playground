@@ -52,7 +52,7 @@ const Olympic = () => {
   useEffect(() => {
     // 中国奖牌
     fetch(
-      '/List/getHandDataList?id=TDAT1719213513235359&serviceId=tvcctv&n=100&p=1'
+      '/api/List/getHandDataList?id=TDAT1719213513235359&serviceId=tvcctv&n=100&p=1'
     )
       .then((response) => response.json())
       .then((json) => {
