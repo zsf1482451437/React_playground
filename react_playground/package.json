@@ -158,5 +158,6 @@
   },
   "devDependencies": {
     "prettier": "^3.3.2"
-  }
+  },
+  "proxy": "https://api.cntv.cn"
 }
