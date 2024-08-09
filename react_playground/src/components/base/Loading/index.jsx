@@ -13,4 +13,6 @@ const Loading = () => (
   </div>
 );
 
+Loading.type = 'component';
+
 export default Loading;

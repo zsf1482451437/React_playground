@@ -98,4 +98,6 @@ const Olympic = () => {
   );
 };
 
+Olympic.type = 'page';
+
 export default Olympic;

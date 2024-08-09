@@ -93,4 +93,6 @@ const WaterfallLayout = () => {
   );
 };
 
+WaterfallLayout.type = 'layout';
+
 export default WaterfallLayout;

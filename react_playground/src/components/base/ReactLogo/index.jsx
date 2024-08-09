@@ -13,4 +13,6 @@ const ReactLogo = () => {
   );
 };
 
+ReactLogo.type = 'component';
+
 export default ReactLogo;

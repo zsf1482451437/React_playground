@@ -18,4 +18,6 @@ const Website = () => {
   );
 };
 
+Website.type = 'page';
+
 export default Website;

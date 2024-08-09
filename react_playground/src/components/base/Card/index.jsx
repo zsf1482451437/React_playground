@@ -42,4 +42,6 @@ const Card = () => {
   );
 };
 
+Card.type = 'component';
+
 export default Card;

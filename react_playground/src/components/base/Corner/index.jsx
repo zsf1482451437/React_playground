@@ -41,4 +41,6 @@ const Corner = () => {
   );
 };
 
+Corner.type = 'component';
+
 export default Corner;
