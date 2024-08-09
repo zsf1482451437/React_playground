@@ -69,6 +69,7 @@
   "scripts": {
     "start": "set  && set PORT=8006 && node scripts/start.js",
     "build": "node scripts/build.js",
+    "generateExports": "node utils/generate.js",
     "test": "node scripts/test.js",
     "prettier": "prettier --write ."
   },
