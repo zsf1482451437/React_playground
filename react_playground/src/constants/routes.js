@@ -1,4 +1,5 @@
 const ROUTES = {
+  HOME: '/',
   COMPONENT: '/component',
   LAYOUT: '/layout',
   PAGE: '/page',

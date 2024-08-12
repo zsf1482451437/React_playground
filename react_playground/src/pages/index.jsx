@@ -37,10 +37,18 @@ Object.keys(Components).forEach((key) => {
   }
 });
 
-function Page() {
+const Page = () => {
   return (
     <Router>
       <Routes>
+        <Route
+          path="/"
+          element={
+            <div className={cn('page')}>
+              {renderComponents(categorizedComponents.component)}
+            </div>
+          }
+        />
         {Object.keys(categorizedComponents).map((type, index) => (
           <Route
             key={type + index}
@@ -55,6 +63,6 @@ function Page() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default Page;

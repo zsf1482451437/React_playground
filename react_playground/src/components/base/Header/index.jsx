@@ -1,3 +1,4 @@
+import React from 'react';
 import { animated, to } from '@react-spring/web';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
@@ -8,6 +9,7 @@ import ROUTES from 'constants/routes';
 const cn = classNames.bind(styles);
 
 const menus = [
+  { label: '首页', href: ROUTES.HOME },
   { label: '组件', href: ROUTES.COMPONENT },
   { label: '布局', href: ROUTES.LAYOUT },
   { label: '页面', href: ROUTES.PAGE },
