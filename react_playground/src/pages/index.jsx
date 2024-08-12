@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // 从 autoImport 的 index.js 直接导入所有组件
 import * as Components from 'components/autoImport';
 
+import ROUTES from 'constants/routes';
+
 const cn = classNames.bind(styles);
 
 const renderComponents = (arr) =>
@@ -16,24 +18,19 @@ const renderComponents = (arr) =>
     : '暂无内容';
 
 // 不同页面
-const categorizedComponents = {
-  component: [],
-  layout: [],
-  page: [],
-  other: [],
-  animation: [],
-  network: [],
-  store: [],
-  utils: [],
-};
+const categorizedPages = {};
+
+Object.keys(ROUTES).forEach((key) => {
+  categorizedPages[key.toLowerCase()] = [];
+});
 
 // 遍历组件并根据静态类型信息进行分类
 Object.keys(Components).forEach((key) => {
   const Component = Components[key];
   const type = Component.type;
 
-  if (type && categorizedComponents[type]) {
-    categorizedComponents[type].push(<Component key={key} />);
+  if (type && categorizedPages[type]) {
+    categorizedPages[type].push(<Component key={key} />);
   }
 });
 
@@ -45,17 +42,17 @@ const Page = () => {
           path="/"
           element={
             <div className={cn('page')}>
-              {renderComponents(categorizedComponents.component)}
+              {renderComponents(categorizedPages.component)}
             </div>
           }
         />
-        {Object.keys(categorizedComponents).map((type, index) => (
+        {Object.keys(categorizedPages).map((type, index) => (
           <Route
             key={type + index}
             path={type}
             element={
               <div className={cn('page')}>
-                {renderComponents(categorizedComponents[type])}
+                {renderComponents(categorizedPages[type])}
               </div>
             }
           />
