@@ -1,11 +1,11 @@
 $gap: 1rem;
 
-.card_container {
+.container {
   box-sizing: content-box;
   display: flex;
   margin-bottom: $gap;
   position: relative;
-  .card_header {
+  .header {
     margin-top: 4rem;
     flex: 0 0 250px;
     margin-right: 1rem;
@@ -21,6 +21,10 @@ $gap: 1rem;
       font-weight: 700;
       font-size: clamp(1.8rem, 1.8rem + 0.2vw, 3rem);
       font-weight: 800;
+    }
+    .description {
+      color: #ff7a18;
+      font-size: 1.2rem;
     }
     p {
       margin: 0;
@@ -62,7 +66,7 @@ $gap: 1rem;
       border-radius: 8px;
     }
   }
-  .card_list {
+  .list {
     flex: 1;
     scrollbar-color: #666 #201c29;
     padding: 3rem 0 3rem 2rem;

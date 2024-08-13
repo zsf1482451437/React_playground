@@ -4,102 +4,19 @@ import styles from './index.module.scss';
 
 import EasyCard from 'components/base/Card/EasyCard';
 
-const cardsData = [
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  {
-    category: 'Article',
-    title: 'CSS Container Queries',
-    tags: ['CONTAINER-QUERIES'],
-    author: {
-      name: 'Geoff Graham',
-      avatar: 'path/to/avatar.jpg',
-    },
-  },
-  // 更多卡片数据...
-];
-
 const cn = classNames.bind(styles);
 
-const CardSection = () => {
+const CardSection = ({ title, description, url, author, cardsData }) => {
   return (
-    <div className={cn('card_container')}>
-      <div className={cn('card_header')}>
-        <h2>
-          ewerwr
-          <br />
-          ewrwer
-          <br />
-          affs
-        </h2>
+    <div className={cn('container')}>
+      <div className={cn('header')}>
+        <h2>{title}</h2>
+        <p className={cn('description')}>{description}</p>
         <p>
-          sdfsdf
-          <br />
-          <a href="https://github.com/zsf1482451437">wewr</a>
+          <a href={url}>作者：{author}</a>
         </p>
       </div>
-      <div className={cn('card_list')}>
+      <div className={cn('list')}>
         {cardsData.map((card, index) => (
           <EasyCard key={index} {...card} />
         ))}
