@@ -18,6 +18,7 @@ function initSceneAndCamera() {
 function initRenderer() {
   const renderer = new THREE.WebGLRenderer(); // 创建WebGL渲染器
   renderer.setSize(window.innerWidth, window.innerHeight); // 设置渲染器大小
+  renderer.setClearColor(0xffffff); // 设置背景色
   document.body.appendChild(renderer.domElement); // 将渲染器的DOM元素添加到文档中
   return renderer; // 返回渲染器对象
 }

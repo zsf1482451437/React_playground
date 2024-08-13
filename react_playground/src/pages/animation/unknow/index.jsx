@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 
-import createFireEffect from 'animation/fire/flower';
+import createFireEffect from 'animation/unknow';
 
 const cn = classNames.bind(styles);
 
-const Animation = () => {
+const Unknow = () => {
   useEffect(() => {
     createFireEffect({
       color: 0xff0000,
@@ -22,4 +22,6 @@ const Animation = () => {
   );
 };
 
-export default Animation;
+Unknow.type = 'animation';
+
+export default Unknow;
