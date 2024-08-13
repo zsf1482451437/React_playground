@@ -21,6 +21,7 @@ const CardSection = ({ title, description, url, author, cardsData }) => {
           <EasyCard key={index} {...card} />
         ))}
       </div>
+      <div className={cn('footer')}></div>
     </div>
   );
 };

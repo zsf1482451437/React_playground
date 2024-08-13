@@ -9,19 +9,16 @@ const EasyCard = ({ category, title, tags, author }) => {
     <article className={cn('card')}>
       <div className={cn('content')}>
         <span className={cn('category')}>{category}</span>
-        <h2 className={cn('title')}>{title}</h2>
-        <div className={cn('meta')}>
+        <h3 className={cn('title')}>{title}</h3>
+        <div className={cn('tags')}>
           {tags.map((tag, index) => (
-            <span key={index} className={cn('tag')}>
+            <a key={index} href="/">
               {tag}
-            </span>
+            </a>
           ))}
-          {/* <img
-            src={author.avatar}
-            alt={author.name}
-            className={cn('author-avatar')}
-          /> */}
-          <span className={cn('author-name')}>{author.name}</span>
+        </div>
+        <div className={cn('author_row')}>
+          <img src={author.avatar} alt={'头像'} className={cn('avatar')} />
         </div>
       </div>
     </article>

@@ -2,6 +2,8 @@ import React from 'react';
 
 import CardSection from 'sections/cardSection';
 
+import profile from 'assets/img/profile.jpg';
+
 const cardSectionData = {
   title: '组件',
   description: '“开箱即用”',
@@ -9,79 +11,35 @@ const cardSectionData = {
   author: '平头哥',
   cardsData: [
     {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
+      title: '卡片',
+      tags: ['card'],
     },
     {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
+      title: 'github角标',
+      tags: ['github'],
     },
     {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
+      title: '页头',
+      tags: ['navigation'],
     },
     {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
+      title: '加载状态',
+      tags: ['loading'],
     },
     {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
-    },
-    {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
-    },
-    {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
-    },
-    {
-      category: 'Article',
-      title: 'CSS Container Queries',
-      tags: ['CONTAINER-QUERIES'],
-      author: {
-        name: 'Geoff Graham',
-        avatar: 'path/to/avatar.jpg',
-      },
+      title: 'React logo',
+      tags: ['logo'],
     },
   ],
 };
+
+cardSectionData.cardsData = cardSectionData?.cardsData?.map((item) => {
+  return {
+    ...item,
+    category: 'Component',
+    author: { avatar: profile },
+  };
+});
 
 const Index = () => {
   return (

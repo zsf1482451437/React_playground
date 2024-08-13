@@ -1,9 +1,7 @@
-$gap: 1rem;
-
 .container {
   box-sizing: content-box;
   display: flex;
-  margin-bottom: $gap;
+  margin-bottom: 1rem;
   position: relative;
   .header {
     margin-top: 4rem;
@@ -67,21 +65,15 @@ $gap: 1rem;
     }
   }
   .list {
-    flex: 1;
     scrollbar-color: #666 #201c29;
     padding: 3rem 0 3rem 2rem;
     margin: 0;
     display: flex;
     overflow-x: scroll;
-    gap: $gap;
+    gap: 4rem;
     position: relative;
   }
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 3rem;
-    bottom: 3.6rem;
+  .footer {
     width: 5px;
     border-radius: 5px;
     background: linear-gradient(
