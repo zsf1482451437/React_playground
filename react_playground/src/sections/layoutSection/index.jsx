@@ -12,15 +12,15 @@ const layoutSectionData = {
   sectionData: [
     {
       title: 'Flex',
-      tags: ['layout'],
+      tags: ['弹性布局'],
     },
     {
       title: 'Gird',
-      tags: ['layout'],
+      tags: ['网格布局'],
     },
     {
-      title: '砖体(瀑布流)',
-      tags: ['layout'],
+      title: '砖体',
+      tags: ['瀑布流'],
     },
   ],
 };

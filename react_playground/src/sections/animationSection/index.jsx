@@ -12,11 +12,11 @@ const animationSectionData = {
   sectionData: [
     {
       title: '莲花粒子',
-      tags: ['animation'],
+      tags: ['particle'],
     },
     {
       title: '火焰',
-      tags: ['animation'],
+      tags: ['flame'],
     },
   ],
 };

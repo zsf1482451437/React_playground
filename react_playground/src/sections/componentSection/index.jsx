@@ -15,6 +15,10 @@ const componentSectionData = {
       tags: ['card'],
     },
     {
+      title: '页头',
+      tags: ['header'],
+    },
+    {
       title: 'github角标',
       tags: ['github'],
     },
