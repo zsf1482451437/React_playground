@@ -1,15 +1,15 @@
 import React from 'react';
 
-import CardSection from 'sections/cardSection';
+import ComponentSection from 'sections/componentSection';
 
 import profile from 'assets/img/profile.jpg';
 
-const cardSectionData = {
+const componentSectionData = {
   title: '组件',
   description: '“开箱即用”',
   url: 'https://github.com/zsf1482451437',
   author: '平头哥',
-  cardsData: [
+  componentData: [
     {
       title: '卡片',
       tags: ['card'],
@@ -33,18 +33,20 @@ const cardSectionData = {
   ],
 };
 
-cardSectionData.cardsData = cardSectionData?.cardsData?.map((item) => {
-  return {
-    ...item,
-    category: 'Component',
-    author: { avatar: profile },
-  };
-});
+componentSectionData.componentData = componentSectionData?.componentData?.map(
+  (item) => {
+    return {
+      ...item,
+      category: 'Component',
+      author: { avatar: profile },
+    };
+  }
+);
 
 const Index = () => {
   return (
     <>
-      <CardSection {...cardSectionData} />
+      <ComponentSection {...componentSectionData} />
     </>
   );
 };

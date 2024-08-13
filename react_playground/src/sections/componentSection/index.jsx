@@ -6,7 +6,13 @@ import EasyCard from 'components/base/Card/EasyCard';
 
 const cn = classNames.bind(styles);
 
-const CardSection = ({ title, description, url, author, cardsData }) => {
+const ComponentSection = ({
+  title,
+  description,
+  url,
+  author,
+  componentData,
+}) => {
   return (
     <div className={cn('container')}>
       <div className={cn('header')}>
@@ -17,7 +23,7 @@ const CardSection = ({ title, description, url, author, cardsData }) => {
         </p>
       </div>
       <div className={cn('list')}>
-        {cardsData.map((card, index) => (
+        {componentData.map((card, index) => (
           <EasyCard key={index} {...card} />
         ))}
       </div>
@@ -26,4 +32,4 @@ const CardSection = ({ title, description, url, author, cardsData }) => {
   );
 };
 
-export default CardSection;
+export default ComponentSection;
