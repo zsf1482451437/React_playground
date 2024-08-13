@@ -1,34 +1,53 @@
 import React from 'react';
-import classNames from 'classnames/bind';
-import styles from './index.module.scss';
 
-import EasyCard from 'components/base/Card/EasyCard';
+import Section from 'components/section';
 
-const cn = classNames.bind(styles);
+import profile from 'assets/img/profile.jpg';
 
-const ComponentSection = ({
-  title,
-  description,
-  url,
-  author,
-  componentData,
-}) => {
+const componentSectionData = {
+  title: '组件',
+  description: '“开箱即用”',
+  url: 'https://github.com/zsf1482451437',
+  author: '平头哥',
+  sectionData: [
+    {
+      title: '卡片',
+      tags: ['card'],
+    },
+    {
+      title: 'github角标',
+      tags: ['github'],
+    },
+    {
+      title: '页头',
+      tags: ['navigation'],
+    },
+    {
+      title: '加载状态',
+      tags: ['loading'],
+    },
+    {
+      title: 'React logo',
+      tags: ['logo'],
+    },
+  ],
+};
+
+componentSectionData.sectionData = componentSectionData?.sectionData?.map(
+  (item) => {
+    return {
+      ...item,
+      category: 'Component',
+      author: { avatar: profile },
+    };
+  }
+);
+
+const ComponentSection = () => {
   return (
-    <div className={cn('container')}>
-      <div className={cn('header')}>
-        <h2>{title}</h2>
-        <p className={cn('description')}>{description}</p>
-        <p>
-          <a href={url}>作者：{author}</a>
-        </p>
-      </div>
-      <div className={cn('list')}>
-        {componentData.map((card, index) => (
-          <EasyCard key={index} {...card} />
-        ))}
-      </div>
-      <div className={cn('footer')}></div>
-    </div>
+    <>
+      <Section {...componentSectionData} />
+    </>
   );
 };
 
