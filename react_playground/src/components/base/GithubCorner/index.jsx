@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 
 const cn = classNames.bind(styles);
 
-const Corner = () => {
+const GithubCorner = () => {
   return (
     <a
       href="https://github.com/zsf1482451437"
@@ -41,6 +41,6 @@ const Corner = () => {
   );
 };
 
-Corner.type = 'component';
+GithubCorner.type = 'component';
 
-export default Corner;
+export default GithubCorner;

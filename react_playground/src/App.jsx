@@ -2,19 +2,21 @@ import { useSelector } from 'react-redux';
 
 import { loadingSelector } from 'store/loading/getter';
 
-import Page from 'pages';
 import Loading from 'components/base/Loading';
 import DesktopHeader from 'components/base/Header';
+import GithubCorner from 'components/base/GithubCorner';
+import RouterComponent from 'components/router';
 
-function App() {
+const App = () => {
   const isLoading = useSelector(loadingSelector);
   return (
     <>
       {isLoading && <Loading />}
+      <GithubCorner />
       <DesktopHeader />
-      <Page />
+      <RouterComponent />
     </>
   );
-}
+};
 
 export default App;

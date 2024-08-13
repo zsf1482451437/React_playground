@@ -1,0 +1,68 @@
+.card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(85deg, #434343, #262626);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  margin: 0;
+  min-width: 300px;
+  min-height: 350px;
+  box-shadow: -2rem 0 3rem -2rem black;
+
+  &:hover {
+    transform: translate(-0.5rem, -1rem) rotate(3deg);
+  }
+
+  &:hover ~ .card {
+    transform: translateX(130px);
+  }
+
+  &:not(:first-child) {
+    margin-left: -130px;
+    box-shadow: -3rem 0 3rem -2rem #000;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .category {
+    font-size: 0.8em;
+    color: #888;
+  }
+
+  .title {
+    margin: 10px 0;
+    color: #fff;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: #444;
+    color: #ff8c00;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .author-name {
+    color: #ccc;
+    font-size: 0.9em;
+  }
+}
