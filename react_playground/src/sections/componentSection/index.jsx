@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Section from 'components/section';
+import DETAIL from 'constants/detail';
 
 import profile from 'assets/img/profile.jpg';
 
@@ -13,22 +14,27 @@ const componentSectionData = {
     {
       title: '卡片',
       tags: ['card'],
+      path: DETAIL.CARD,
     },
     {
       title: 'github角标',
       tags: ['github'],
+      path: DETAIL.GITHUB,
     },
     {
       title: '页头',
       tags: ['navigation'],
+      path: DETAIL.NAVIGATION,
     },
     {
       title: '加载状态',
       tags: ['loading'],
+      path: DETAIL.LOADING,
     },
     {
       title: 'React logo',
       tags: ['logo'],
+      path: DETAIL.LOGO,
     },
   ],
 };

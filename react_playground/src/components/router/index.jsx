@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // 从 autoImport 的 index.js 直接导入所有组件
 import * as Components from 'components/autoImport';
-import CardSection from 'pages';
-
+import Index from 'pages';
+import Detail from 'pages/detail';
 import ROUTES from 'constants/routes';
 
 const cn = classNames.bind(styles);
@@ -40,7 +40,8 @@ const RouterComponent = () => {
     <div className={cn('page')}>
       <Router>
         <Routes>
-          <Route path="/" element={<CardSection />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/detail/*" element={<Detail />} />
           {Object.keys(categorizedPages).map((type, index) => (
             <Route
               key={type + index}

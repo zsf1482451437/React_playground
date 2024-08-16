@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 
@@ -7,6 +8,10 @@ import EasyCard from 'components/base/Card/EasyCard';
 const cn = classNames.bind(styles);
 
 const Section = ({ title, description, url, author, sectionData }) => {
+  const navigate = useNavigate();
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
   return (
     <div className={cn('container')}>
       <div className={cn('header')}>
@@ -18,7 +23,11 @@ const Section = ({ title, description, url, author, sectionData }) => {
       </div>
       <div className={cn('list')}>
         {sectionData.map((card, index) => (
-          <EasyCard key={index} {...card} />
+          <EasyCard
+            handleClick={() => handleNavigation(card.path)}
+            key={index}
+            {...card}
+          />
         ))}
       </div>
       <div className={cn('footer')}></div>

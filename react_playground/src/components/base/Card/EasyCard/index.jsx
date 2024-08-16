@@ -4,9 +4,9 @@ import styles from './index.module.scss';
 
 const cn = classNames.bind(styles);
 
-const EasyCard = ({ category, title, tags, author }) => {
+const EasyCard = ({ category, title, tags, author, handleClick }) => {
   return (
-    <article className={cn('card')}>
+    <article className={cn('card')} onClick={() => handleClick()}>
       <div className={cn('content')}>
         <span className={cn('category')}>{category}</span>
         <h3 className={cn('title')}>{title}</h3>
