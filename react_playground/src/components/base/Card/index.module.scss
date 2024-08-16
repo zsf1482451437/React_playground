@@ -4,7 +4,7 @@ $background-color: #121212;
 $title-font-size: 30px;
 $date-font-size: 18px;
 
-.ag-format-container {
+.ag_format_container {
   width: 1142px;
   margin: 0 auto;
 
@@ -17,20 +17,20 @@ body {
   background-color: #fff;
 }
 
-.ag-courses_box {
+.ag_courses_box {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 50px 0;
 }
 
-@for $i from 1 through length($secondary-colors) {
-  .ag-courses_item:nth-child(#{$i}) .ag-courses-item_bg {
-    background-color: nth($secondary-colors, $i);
+@for $i from 1 through length($secondary_colors) {
+  .ag_courses_item:nth-child(#{$i}) .ag_courses_item_bg {
+    background-color: nth($secondary_colors, $i);
   }
 }
 
-.ag-courses_item {
+.ag_courses_item {
   flex-basis: calc(33.33333% - 30px);
   margin: 0 15px 30px;
   overflow: hidden;
@@ -44,30 +44,30 @@ body {
     flex-basis: 100%;
   }
 
-  .ag-courses-item_link {
+  .ag_courses_item_link {
     display: block;
     padding: 30px 20px;
-    background-color: $background-color;
+    background-color: $background_color;
     overflow: hidden;
     position: relative;
 
     &:hover,
-    &:hover .ag-courses-item_date {
+    &:hover .ag_courses_item_date {
       text-decoration: none;
       color: #fff;
     }
 
-    &:hover .ag-courses-item_bg {
+    &:hover .ag_courses_item_bg {
       transform: scale(10);
     }
   }
 
-  .ag-courses-item_title {
+  .ag_courses_item_title {
     min-height: 87px;
     margin: 0 0 25px;
     overflow: hidden;
     font-weight: bold;
-    font-size: $title-font-size;
+    font-size: $title_font_size;
     color: #fff;
     z-index: 2;
     position: relative;
@@ -79,8 +79,8 @@ body {
     }
   }
 
-  .ag-courses-item_date-box {
-    font-size: $date-font-size;
+  .ag_courses_item_date_box {
+    font-size: $date_font_size;
     color: #fff;
     z-index: 2;
     position: relative;
@@ -90,16 +90,16 @@ body {
     }
   }
 
-  .ag-courses-item_date {
+  .ag_courses_item_date {
     font-weight: bold;
-    color: $primary-color;
+    color: $primary_color;
     transition: color 0.5s ease;
   }
 
-  .ag-courses-item_bg {
+  .ag_courses_item_bg {
     height: 128px;
     width: 128px;
-    background-color: $primary-color;
+    background-color: $primary_color;
     z-index: 1;
     position: absolute;
     top: -75px;
