@@ -10,6 +10,7 @@ const cn = classNames.bind(styles);
 const Section = ({ title, description, url, author, sectionData }) => {
   const navigate = useNavigate();
   const handleNavigation = (path) => {
+    console.log('path', path);
     navigate(path);
   };
   return (

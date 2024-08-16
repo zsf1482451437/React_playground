@@ -5,7 +5,6 @@ $title-font-size: 30px;
 $date-font-size: 18px;
 
 .ag_format_container {
-  width: 1142px;
   margin: 0 auto;
 
   @media only screen and (max-width: 767px) {
@@ -18,10 +17,7 @@ body {
 }
 
 .ag_courses_box {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 50px 0;
+  margin: 0 auto;
 }
 
 @for $i from 1 through length($secondary_colors) {
@@ -32,6 +28,7 @@ body {
 
 .ag_courses_item {
   flex-basis: calc(33.33333% - 30px);
+  width: 300px;
   margin: 0 15px 30px;
   overflow: hidden;
   border-radius: 28px;

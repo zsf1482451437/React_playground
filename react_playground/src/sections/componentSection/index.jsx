@@ -24,7 +24,7 @@ const componentSectionData = {
     {
       title: '页头',
       tags: ['navigation'],
-      path: DETAIL.NAVIGATION,
+      path: DETAIL.HEADER,
     },
     {
       title: '加载状态',
