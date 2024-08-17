@@ -1,6 +1,8 @@
 // 导入THREE.js库
 import * as THREE from 'three';
 
+let animationId; // 用于存储动画帧请求的ID
+
 // 初始化场景和相机
 function initSceneAndCamera() {
   const scene = new THREE.Scene(); // 创建一个新场景
@@ -73,7 +75,7 @@ function createLotusFlowerParticles(scene, { color, size, particleCount }) {
 // 动画循环
 function animate(renderer, scene, camera, particleSystem, rotationSpeed) {
   function loop() {
-    requestAnimationFrame(loop); // 请求下一帧动画
+    animationId = requestAnimationFrame(loop); // 请求下一帧动画
     particleSystem.rotation.y += rotationSpeed; // 旋转粒子系统
 
     // 动态调整粒子颜色
@@ -101,6 +103,14 @@ function createFireEffect({
     particleCount,
   }); // 创建粒子系统
   animate(renderer, scene, camera, particleSystem, rotationSpeed); // 开始动画循环
+
+  // 返回一个关闭函数
+  return function stopAnimation() {
+    cancelAnimationFrame(animationId); // 取消动画帧请求
+    document.body.removeChild(renderer.domElement); // 移除渲染器的DOM元素
+    renderer.dispose(); // 释放渲染器资源
+    scene.clear(); // 清理场景
+  };
 }
 
 // 导出createFireEffect函数

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Section from 'components/section';
+import DETAIL from 'constants/detail';
 
 import profile from 'assets/img/profile.jpg';
 
@@ -13,10 +14,12 @@ const animationSectionData = {
     {
       title: '莲花粒子',
       tags: ['particle'],
+      path: DETAIL.PARTICLE,
     },
     {
       title: '火焰',
       tags: ['flame'],
+      path: DETAIL.FLAME,
     },
   ],
 };

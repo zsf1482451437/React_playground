@@ -2,9 +2,10 @@
 export { default as Website } from 'pages/website';
 export { default as Olympic } from 'pages/olympics';
 // 动画
-export { default as Unknow } from 'pages/animation/unknow';
+export { default as Particle } from 'pages/animation/particle';
+export { default as Flame } from 'pages/animation/flame';
 // 其他
-export { default as MyCodeComponent } from 'pages/other';
+
 // 布局
 export { default as Layout } from 'pages/layout';
 // 组件
