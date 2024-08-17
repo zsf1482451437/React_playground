@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "animation/*": ["src/animation/*"],
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "hooks/*": ["src/hooks/*"],
+      "pages/*": ["src/pages/*"],
+      "request/*": ["src/request/*"],
+      "sections/*": ["src/sections/*"],
+      "store/*": ["src/store/*"],
+      "utils/*": ["src/utils/*"]
+    }
+  }
+}
