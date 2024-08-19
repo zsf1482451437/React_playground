@@ -16,7 +16,7 @@ const common_data = [
   { path: DETAIL.HEADER, component: <Header /> },
   { path: DETAIL.LOADING, component: <Loading /> },
   { path: DETAIL.LOGO, component: <ReactLogo /> },
-  { path: DETAIL.FLOWER, component: <Flame /> },
+  { path: DETAIL.FLAME, component: <Flame /> },
   { path: DETAIL.PARTICLE, component: <Particle /> },
 ];
 export default common_data;
