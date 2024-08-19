@@ -67,4 +67,19 @@
       }
     }
   }
+
+  .preview {
+    width: 100px;
+    height: 100px;
+    padding: 10px; /* 可选：添加内边距 */
+    position: relative;
+    pointer-events: none;
+    & > * {
+      transform: scale(0.5);
+      transform-origin: top left;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+  }
 }

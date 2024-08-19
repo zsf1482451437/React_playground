@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 const cn = classNames.bind(styles);
 
-const EasyCard = ({ category, title, tags, author, handleClick }) => {
+const EasyCard = ({ category, title, tags, author, preview, handleClick }) => {
   return (
     <article className={cn('card')} onClick={() => handleClick()}>
       <div className={cn('content')}>
@@ -21,6 +21,7 @@ const EasyCard = ({ category, title, tags, author, handleClick }) => {
           <img src={author.avatar} alt={'头像'} className={cn('avatar')} />
         </div>
       </div>
+      <div className={cn('preview')}>{preview}</div>
     </article>
   );
 };

@@ -1,5 +1,6 @@
 .app_logo {
-  height: 40vmin;
+  width: 100px;
+  height: 100px;
   pointer-events: none;
 }
 
@@ -17,6 +18,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100px;
 }
 
 @keyframes app_logo_spin {
