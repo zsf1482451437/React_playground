@@ -18,10 +18,16 @@ function initSceneAndCamera() {
 
 // 初始化渲染器
 function initRenderer() {
+  const container = document.getElementById('particle'); // 获取ID为particle的元素
   const renderer = new THREE.WebGLRenderer(); // 创建WebGL渲染器
   renderer.setSize(window.innerWidth, window.innerHeight); // 设置渲染器大小
-  renderer.setClearColor(0xffffff); // 设置背景色
-  document.body.appendChild(renderer.domElement); // 将渲染器的DOM元素添加到文档中
+  renderer.setClearColor(0xffffff, 0);
+  // 获取ID为particle的元素
+  if (container) {
+    container.appendChild(renderer.domElement); // 将渲染器的DOM元素添加到该元素中
+  } else {
+    console.error('Element with ID "particle" not found.');
+  }
   return renderer; // 返回渲染器对象
 }
 
@@ -94,6 +100,7 @@ function createFireEffect({
   particleCount = 500, // 默认粒子数量
   rotationSpeed = 0.01, // 默认旋转速度
 } = {}) {
+  const container = document.getElementById('particle'); // 获取ID为particle的元素
   const { scene, camera } = initSceneAndCamera(); // 初始化场景和相机
   const renderer = initRenderer(); // 初始化渲染器
   addLighting(scene); // 添加光照
@@ -107,7 +114,9 @@ function createFireEffect({
   // 返回一个关闭函数
   return function stopAnimation() {
     cancelAnimationFrame(animationId); // 取消动画帧请求
-    document.body.removeChild(renderer.domElement); // 移除渲染器的DOM元素
+    if (container && renderer.domElement.parentNode === container) {
+      container.removeChild(renderer.domElement); // 从正确的父元素中移除渲染器的DOM元素
+    }
     renderer.dispose(); // 释放渲染器资源
     scene.clear(); // 清理场景
   };
