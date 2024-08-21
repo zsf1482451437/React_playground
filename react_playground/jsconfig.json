@@ -9,7 +9,7 @@
       "hooks/*": ["src/hooks/*"],
       "pages/*": ["src/pages/*"],
       "request/*": ["src/request/*"],
-      "sections/*": ["src/sections/*"],
+      "sections/*": ["src/pages/sections/*"],
       "store/*": ["src/store/*"],
       "utils/*": ["src/utils/*"]
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ComponentSection from 'sections/componentSection';
-import AnimationSection from 'sections/animationSection';
-import LayoutSection from 'sections/layoutSection';
+import ComponentSection from 'pages/sections/componentSection';
+import AnimationSection from 'pages/sections/animationSection';
+import LayoutSection from 'pages/sections/layoutSection';
 
 const Index = () => {
   return (

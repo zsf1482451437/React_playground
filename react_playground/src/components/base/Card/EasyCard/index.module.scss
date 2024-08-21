@@ -81,5 +81,8 @@
       top: 10px;
       left: 20px;
     }
+    :global(.particle) {
+      transform: scale3d(4, 4, 4) !important;
+    }
   }
 }
