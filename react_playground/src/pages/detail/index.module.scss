@@ -1,3 +1,24 @@
 .container {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .component_render {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .code_section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #333;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+  }
 }
