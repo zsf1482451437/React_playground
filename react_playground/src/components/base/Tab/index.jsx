@@ -34,4 +34,6 @@ const Tab = ({ tabs }) => {
   );
 };
 
+Tab.type = 'component';
+
 export default Tab;

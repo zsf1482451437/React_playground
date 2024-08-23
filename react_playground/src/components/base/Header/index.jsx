@@ -19,7 +19,7 @@ const menus = [
   { label: '状态管理', href: ROUTES.STORE },
   { label: '工具函数', href: ROUTES.UTILS },
 ];
-const DesktopHeader = () => {
+const Header = () => {
   const pathname = window.location.pathname;
   const [{ x: spotX, y: spotY, r: spotR }, onMouseMove] = useSpotlight();
 
@@ -72,4 +72,6 @@ const DesktopHeader = () => {
   );
 };
 
-export default DesktopHeader;
+Header.type = 'component';
+
+export default Header;
