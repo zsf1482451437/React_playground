@@ -1,11 +1,7 @@
 import React from 'react';
 
 import Section from 'components/section';
-import Card from 'components/base/Card';
-import GithubCorner from 'components/base/GithubCorner';
-import Header from 'components/base/Header';
-import Loading from 'components/base/Loading';
-import ReactLogo from 'components/base/ReactLogo';
+import { Card, Code, GithubCorner, Header, Loading, ReactLogo } from 'utils/categoryExport';
 import DETAIL from 'constants/detail';
 
 import profile from 'assets/img/profile.jpg';
@@ -21,6 +17,12 @@ const componentSectionData = {
       tags: ['card'],
       path: DETAIL.CARD,
       preview: <Card />,
+    },
+    {
+      title: '代码块',
+      tags: ['code'],
+      path: DETAIL.CODE,
+      preview: <Code />,
     },
     {
       title: 'github角标',

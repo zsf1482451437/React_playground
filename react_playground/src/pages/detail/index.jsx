@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 
-import CodeComponent from 'components/base/codeComponent';
+import CodeComponent from 'components/base/Code';
 import common_data from './config';
 import Tab from 'components/base/Tab';
 

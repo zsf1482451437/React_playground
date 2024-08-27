@@ -1,9 +1,12 @@
 // 组件
-import Card from 'components/base/Card';
-import GithubCorner from 'components/base/GithubCorner';
-import Header from 'components/base/Header';
-import Loading from 'components/base/Loading';
-import ReactLogo from 'components/base/ReactLogo';
+import {
+  Card,
+  Code,
+  GithubCorner,
+  Header,
+  Loading,
+  ReactLogo,
+} from 'utils/categoryExport';
 // 动画
 import Flame from 'pages/animation/flame';
 import Particle from 'pages/animation/particle';
@@ -12,6 +15,7 @@ import DETAIL from 'constants/detail';
 
 // 加载组件的源代码
 import CardSource from '!!raw-loader!components/base/Card/index.jsx';
+import CodeSource from '!!raw-loader!components/base/Code/index.jsx';
 import GithubCornerSource from '!!raw-loader!components/base/GithubCorner/index.jsx';
 import HeaderSource from '!!raw-loader!components/base/Header/index.jsx';
 import LoadingSource from '!!raw-loader!components/base/Loading/index.jsx';
@@ -21,6 +25,7 @@ import ParticleSource from '!!raw-loader!pages/animation/particle/index.jsx';
 
 // 加载组件的样式
 import CardStyle from '!!raw-loader!components/base/Card/index.module.scss';
+import CodeStyle from '!!raw-loader!components/base/Code/index.module.scss';
 import GithubCornerStyle from '!!raw-loader!components/base/GithubCorner/index.module.scss';
 import HeaderStyle from '!!raw-loader!components/base/Header/index.module.scss';
 import LoadingStyle from '!!raw-loader!components/base/Loading/index.module.scss';
@@ -34,6 +39,12 @@ const common_data = [
     component: <Card />,
     code: CardSource,
     style: CardStyle,
+  },
+  {
+    path: DETAIL.CODE,
+    component: <Code />,
+    code: CodeSource,
+    style: CodeStyle,
   },
   {
     path: DETAIL.GITHUB,

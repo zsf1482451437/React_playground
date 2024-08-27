@@ -84,5 +84,8 @@
     :global(.particle) {
       transform: scale3d(4, 4, 4) !important;
     }
+    :global(.code_container_preview) {
+      width: 300px;
+    }
   }
 }

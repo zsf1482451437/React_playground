@@ -9,13 +9,13 @@ const cn = classNames.bind(styles);
  * TODO: fix console warning
  **/
 
-const CodeComponent = ({
+const Code = ({
   showLineNumbers = true,
   code = 'HELLO WORLD',
   theme = atomOneDark,
   language = 'jsx',
 }) => (
-  <div className={cn('code_container')}>
+  <div className={`${cn('code_container')} code_container_preview`}>
     <CopyBlock
       text={code}
       showLineNumbers={showLineNumbers}
@@ -26,6 +26,6 @@ const CodeComponent = ({
   </div>
 );
 
-CodeComponent.type = 'component';
+Code.type = 'component';
 
-export default CodeComponent;
+export default Code;
