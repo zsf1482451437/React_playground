@@ -4,7 +4,25 @@ import styles from './index.module.scss';
 
 const cn = classNames.bind(styles);
 
-const Tab = ({ tabs }) => {
+const defaultTabs = [
+  {
+    key: 'tab1',
+    label: '选项卡1',
+    content: 'Content 1',
+  },
+  {
+    key: 'tab2',
+    label: '选项卡2',
+    content: 'Content 2',
+  },
+  {
+    key: 'tab3',
+    label: '选项卡3',
+    content: 'Content 3',
+  },
+];
+
+const Tab = ({ tabs = defaultTabs }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].key);
 
   return (
