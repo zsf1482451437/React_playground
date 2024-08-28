@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from 'components/section';
-import { Card, Code, GithubCorner, Header, Loading, ReactLogo } from 'utils/categoryExport';
+import { Card, Code, GithubCorner, Header, Loading, ReactLogo, Tab } from 'utils/categoryExport';
 import DETAIL from 'constants/detail';
 
 import profile from 'assets/img/profile.jpg';
@@ -17,6 +17,18 @@ const componentSectionData = {
       tags: ['card'],
       path: DETAIL.CARD,
       preview: <Card />,
+    },
+    {
+      title: '加载状态',
+      tags: ['loading'],
+      path: DETAIL.LOADING,
+      preview: <Loading />,
+    },
+    {
+      title: '选项卡',
+      tags: ['tab'],
+      path: DETAIL.TAB,
+      preview: <Tab />,
     },
     {
       title: '代码块',
@@ -36,12 +48,7 @@ const componentSectionData = {
       path: DETAIL.HEADER,
       preview: <Header />,
     },
-    {
-      title: '加载状态',
-      tags: ['loading'],
-      path: DETAIL.LOADING,
-      preview: <Loading />,
-    },
+
     {
       title: 'React logo',
       tags: ['logo'],

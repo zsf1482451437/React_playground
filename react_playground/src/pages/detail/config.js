@@ -1,6 +1,7 @@
 // 组件
 import {
   Card,
+  Tab,
   Code,
   GithubCorner,
   Header,
@@ -16,6 +17,7 @@ import DETAIL from 'constants/detail';
 // 加载组件的源代码
 import CardSource from '!!raw-loader!components/base/Card/index.jsx';
 import CodeSource from '!!raw-loader!components/base/Code/index.jsx';
+import TabSource from '!!raw-loader!components/base/Tab/index.jsx';
 import GithubCornerSource from '!!raw-loader!components/base/GithubCorner/index.jsx';
 import HeaderSource from '!!raw-loader!components/base/Header/index.jsx';
 import LoadingSource from '!!raw-loader!components/base/Loading/index.jsx';
@@ -26,6 +28,7 @@ import ParticleSource from '!!raw-loader!pages/animation/particle/index.jsx';
 // 加载组件的样式
 import CardStyle from '!!raw-loader!components/base/Card/index.module.scss';
 import CodeStyle from '!!raw-loader!components/base/Code/index.module.scss';
+import TabStyle from '!!raw-loader!components/base/Tab/index.module.scss';
 import GithubCornerStyle from '!!raw-loader!components/base/GithubCorner/index.module.scss';
 import HeaderStyle from '!!raw-loader!components/base/Header/index.module.scss';
 import LoadingStyle from '!!raw-loader!components/base/Loading/index.module.scss';
@@ -45,6 +48,12 @@ const common_data = [
     component: <Code />,
     code: CodeSource,
     style: CodeStyle,
+  },
+  {
+    path: DETAIL.TAB,
+    component: <Tab />,
+    code: TabSource,
+    style: TabStyle,
   },
   {
     path: DETAIL.GITHUB,
