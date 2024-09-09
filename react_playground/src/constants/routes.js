@@ -1,13 +1,10 @@
 const ROUTES = {
-  HOME: '/',
-  COMPONENT: '/component',
-  LAYOUT: '/layout',
-  PAGE: '/page',
-  OTHER: '/other',
-  ANIMATION: '/animation',
+  FRONTEND: '/',
+  BACKEND: '/backend',
   NETWORK: '/network',
-  STORE: '/store',
+  COMPUTER: '/computer',
   UTILS: '/utils',
+  DISH: '/dish',
 };
 
 export default ROUTES;

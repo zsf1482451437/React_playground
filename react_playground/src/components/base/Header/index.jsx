@@ -9,15 +9,12 @@ import ROUTES from 'constants/routes';
 const cn = classNames.bind(styles);
 
 const menus = [
-  { label: '首页', href: ROUTES.HOME },
-  { label: '组件', href: ROUTES.COMPONENT },
-  { label: '布局', href: ROUTES.LAYOUT },
-  { label: '页面', href: ROUTES.PAGE },
-  { label: '其他', href: ROUTES.OTHER },
-  { label: '动画', href: ROUTES.ANIMATION },
-  { label: '网络请求', href: ROUTES.NETWORK },
-  { label: '状态管理', href: ROUTES.STORE },
-  { label: '工具函数', href: ROUTES.UTILS },
+  { label: '前端', href: ROUTES.FRONTEND },
+  { label: '后端', href: ROUTES.BACKEND },
+  { label: '网络', href: ROUTES.NETWORK },
+  { label: '计算机', href: ROUTES.COMPUTER },
+  { label: '工具', href: ROUTES.UTILS },
+  { label: '菜品', href: ROUTES.DISH },
 ];
 const Header = () => {
   const pathname = window.location.pathname;
