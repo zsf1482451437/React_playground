@@ -9,12 +9,3 @@ export { default as Flame } from 'pages/animation/flame';
 // 布局
 export { default as Layout } from 'pages/layout';
 // 组件
-
-export {
-  Card,
-  Code,
-  GithubCorner,
-  Header,
-  Loading,
-  ReactLogo,
-} from 'utils/categoryExport';

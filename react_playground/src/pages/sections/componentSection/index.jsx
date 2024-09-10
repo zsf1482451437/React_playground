@@ -1,7 +1,15 @@
 import React from 'react';
 
 import Section from 'components/section';
-import { Card, Code, GithubCorner, Header, Loading, ReactLogo, Tab } from 'utils/categoryExport';
+import {
+  Card,
+  Code,
+  GithubCorner,
+  Header,
+  Loading,
+  ReactLogo,
+  Tab,
+} from 'components/index';
 import DETAIL from 'constants/detail';
 
 import profile from 'assets/img/profile.jpg';

@@ -7,7 +7,7 @@ import {
   Header,
   Loading,
   ReactLogo,
-} from 'utils/categoryExport';
+} from 'components/index';
 // 动画
 import Flame from 'pages/animation/flame';
 import Particle from 'pages/animation/particle';

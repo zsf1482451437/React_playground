@@ -3,13 +3,10 @@ import { useLocation } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 
-import CodeComponent from 'components/base/Code';
+import { Tab, Code } from 'components/index';
 import common_data from './config';
-import Tab from 'components/base/Tab';
 
 const cn = classNames.bind(styles);
-
-
 
 const Detail = () => {
   const location = useLocation();
@@ -40,7 +37,7 @@ const Detail = () => {
       content: code && (
         <div className={cn('code_section')}>
           <h2>index.jsx</h2>
-          <CodeComponent code={code} language="jsx" />
+          <Code code={code} language="jsx" />
         </div>
       ),
     },
@@ -50,7 +47,7 @@ const Detail = () => {
       content: style && (
         <div className={cn('code_section')}>
           <h2>index.module.scss</h2>
-          <CodeComponent code={style} language="scss" />
+          <Code code={style} language="scss" />
         </div>
       ),
     },
