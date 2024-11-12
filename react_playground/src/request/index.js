@@ -1,17 +1,34 @@
 import store from 'store';
 import axios from 'axios';
+import axiosThrottle from 'axios-request-throttle';
 
 import { setLoading } from 'store/loading';
-import { BASE_URL, TIMEOUT, TOKEN } from './config';
+import { TOKEN } from './config';
 
 class Request {
-  constructor(baseURL, timeout) {
+  // 构造器
+  constructor(baseURL, timeout, config) {
     // 创建axios实例
     this.instance = axios.create({
       baseURL: baseURL, // 替换为你的API基础URL
       timeout: timeout, // 请求超时时间
     });
 
+    // 如果启用了拦截器，则设置拦截器
+    if (config.enableInterceptors) {
+      this.setupInterceptors();
+    }
+
+    // 如果启用了带宽限制，则设置带宽限制
+    if (config.enableThrottle) {
+      axiosThrottle.use(this.instance, {
+        requestsPerSecond: config.requestsPerSecond,
+      });
+    }
+  }
+
+  // 设置请求和响应拦截器
+  setupInterceptors() {
     // 请求拦截器
     this.instance.interceptors.request.use(
       (config) => {
@@ -21,7 +38,7 @@ class Request {
         return config;
       },
       (error) => {
-        store.dispatch(setLoading(false)); // 请求成功关闭loading
+        store.dispatch(setLoading(false)); // 请求失败关闭loading
         // 对请求错误做些什么
         return Promise.reject(error);
       }
@@ -42,10 +59,12 @@ class Request {
     );
   }
 
+  // 构造函数
   request(config) {
     return this.instance.request(config);
   }
 
+  // 成员方法
   // GET请求
   get(config) {
     return this.request({ ...config, method: 'GET' });
@@ -65,8 +84,26 @@ class Request {
   delete(config) {
     return this.request({ ...config, method: 'DELETE' });
   }
+
+  // 获取取消令牌
+  cancelToken() {
+    return axios.CancelToken.source();
+  }
+
+  // 设置默认超时时间
+  setDefaultTimeout(timeout) {
+    this.instance.defaults.timeout = timeout;
+  }
+
+  // 捕获上传进度
+  onUploadProgress(callback) {
+    this.instance.defaults.onUploadProgress = callback;
+  }
+
+  // 捕获下载进度
+  onDownloadProgress(callback) {
+    this.instance.defaults.onDownloadProgress = callback;
+  }
 }
 
-const request = new Request(BASE_URL, TIMEOUT);
-
-export default request;
+export default Request;

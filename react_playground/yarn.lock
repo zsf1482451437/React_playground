@@ -2137,6 +2137,13 @@
   resolved "https://registry.npmjs.org/@types/aria-query/-/aria-query-5.0.4.tgz"
   integrity sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==
 
+"@types/axios@^0.14.0":
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.4.tgz#174e3a05fe7677f13bc719f0d2a427f5defacedf"
+  integrity sha512-9JgOaunvQdsQ/qW2OPmE5+hCeUB52lQSolecrFrthct55QekhmXEwT203s20RL+UHtCQc15y3VXpby9E7Kkh/g==
+  dependencies:
+    axios "*"
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.20.5"
   resolved "https://registry.npmjs.org/@types/babel__core/-/babel__core-7.20.5.tgz"
@@ -3135,6 +3142,23 @@ axe-core@=4.7.0:
   version "4.7.0"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.7.0.tgz"
   integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
+
+axios-request-throttle@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/axios-request-throttle/-/axios-request-throttle-1.0.0.tgz#254d866f7e1aedef6fc0d743cd09b339e0893b8c"
+  integrity sha512-NYh7kZkgSJZyIohqrvQEzr4uygqbxXb769kbphkwgYNAJm5eDg33mqHLA2pwHKC1uqbTfNpmjmzWdUdo+ptBWg==
+  dependencies:
+    "@types/axios" "^0.14.0"
+    promise-throttle "^1.1.2"
+
+axios@*:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
+  integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 axios@^1.7.2:
   version "1.7.2"
@@ -4677,32 +4701,9 @@ eslint-plugin-flowtype@^8.0.3:
     lodash "^4.17.21"
     string-natural-compare "^3.0.1"
 
-eslint-plugin-import@^2.25.3:
+eslint-plugin-import@^2.25.3, eslint-plugin-import@^2.29.1:
   version "2.29.1"
   resolved "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz"
-  integrity sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==
-  dependencies:
-    array-includes "^3.1.7"
-    array.prototype.findlastindex "^1.2.3"
-    array.prototype.flat "^1.3.2"
-    array.prototype.flatmap "^1.3.2"
-    debug "^3.2.7"
-    doctrine "^2.1.0"
-    eslint-import-resolver-node "^0.3.9"
-    eslint-module-utils "^2.8.0"
-    hasown "^2.0.0"
-    is-core-module "^2.13.1"
-    is-glob "^4.0.3"
-    minimatch "^3.1.2"
-    object.fromentries "^2.0.7"
-    object.groupby "^1.0.1"
-    object.values "^1.1.7"
-    semver "^6.3.1"
-    tsconfig-paths "^3.15.0"
-
-eslint-plugin-import@^2.29.1:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.29.1.tgz#d45b37b5ef5901d639c15270d74d46d161150643"
   integrity sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==
   dependencies:
     array-includes "^3.1.7"
@@ -8308,6 +8309,11 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+promise-throttle@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/promise-throttle/-/promise-throttle-1.1.2.tgz#8a59d0424b6f9673aa8405c8b6bd4b5e4f7f71db"
+  integrity sha512-dij7vjyXNewuuN/gyr+TX2KRjw48mbV5FEtgyXaIoJjGYAKT0au23/voNvy9eS4UNJjx2KUdEcO5Yyfc1h7vWQ==
 
 promise@^8.1.0:
   version "8.3.0"
