@@ -8,8 +8,19 @@ import * as Components from 'components/autoImport';
 import Index from 'pages';
 import Detail from 'pages/detail';
 import ROUTES from 'constants/routes';
+import MemoryTrail from 'components/MemoryTrail';
+
+import SRC from 'assets/img/image.jpg';
 
 const cn = classNames.bind(styles);
+
+const nodes = [
+  { image: SRC, text: 'Node 1' },
+  { image: SRC, text: 'Node 2' },
+  { image: SRC, text: 'Node 3' },
+  { image: SRC, text: 'Node 4' },
+  { image: SRC, text: 'Node 5' },
+];
 
 const renderComponents = (arr) =>
   arr.length !== 0
@@ -42,6 +53,7 @@ const RouterComponent = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/detail/*" element={<Detail />} />
+          <Route path="/trail" element={<MemoryTrail nodes={nodes} />} />
           {Object.keys(categorizedPages).map((type, index) => (
             <Route
               key={type + index}
