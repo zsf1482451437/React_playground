@@ -14,6 +14,8 @@ import SRC from 'assets/img/image.jpg';
 
 const cn = classNames.bind(styles);
 
+const DELAY = 1500;
+
 const nodes = [
   { image: SRC, text: 'Node 1' },
   { image: SRC, text: 'Node 2' },
@@ -53,7 +55,12 @@ const RouterComponent = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/detail/*" element={<Detail />} />
-          <Route path="/trail" element={<MemoryTrail nodes={nodes} />} />
+          <Route
+            path="/trail"
+            element={
+              <MemoryTrail nodes={nodes} delay={DELAY} lineType="curved" />
+            }
+          />
           {Object.keys(categorizedPages).map((type, index) => (
             <Route
               key={type + index}
